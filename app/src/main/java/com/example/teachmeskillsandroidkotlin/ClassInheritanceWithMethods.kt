@@ -2,7 +2,7 @@ package com.example.teachmeskillsandroidkotlin
 
 
 /* Создать 3 класса и реализовать в каждом из них 3 метода.
-   Так же один класс, должен наследоваться от другого класса с его методами override. */
+   Так же один класс, должен наследоваться от другого класса с его методами override.*/
 
 
 open class Cars(val capacity: Double,val maxSpeed: Int,val productionYear: Int) {
