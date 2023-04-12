@@ -1,7 +1,10 @@
 <resources>
+
     <string name="app_name">TeachMeSkillsAndroidKotlin</string>
     <string name="action_settings">Settings</string>
+
     <!-- Strings used for fragments for navigation -->
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -9,4 +12,11 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="textview_first_text">Друзья, добро пожаловать!</string>
+    <string name="textview_second_text">Вот вы и вошли)))</string>
+    <string name="button_first_text">Войти</string>
+    <string name="button_second_text">Вернутся назад</string>
+    <string name="hint_first">Введите пожалуйста своё имя</string>
+    <string name="hint_second">Введите пожалуйста пароль</string>
+
 </resources>
