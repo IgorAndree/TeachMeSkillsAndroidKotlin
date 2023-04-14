@@ -1,10 +1,12 @@
 package com.example.teachmeskillsandroidkotlin
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.teachmeskillsandroidkotlin.databinding.FragmentSecondBinding
 
@@ -32,8 +34,38 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        spinner()
+            binding.buttonSecond.setOnClickListener {
+                findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+
+                binding.buttonSecond.setOnClickListener {
+                    findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        }
+
+    }
+
+
+
+    }
+
+    private fun spinner() {
+
+        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                itemSelected: View, selectedItemPosition: Int, selectedId: Long
+            ) {
+                val choose = resources.getStringArray(R.array.animals)
+                val toast = Toast.makeText(
+                    requireContext(),
+                    choose[selectedItemPosition], Toast.LENGTH_SHORT
+                )
+                toast.show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
         }
     }
 
