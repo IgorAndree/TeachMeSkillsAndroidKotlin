@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -11,5 +10,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="my_one_color">#3E605A</color>
     <color name="my_two_color">#A4ECA2</color>
-
+    <color name="my_three_color">#C67373</color>
+    <color name="my_text_one_color">#302B2B</color>
 </resources>

@@ -1,5 +1,4 @@
 <resources>
-
     <string name="app_name">TeachMeSkillsAndroidKotlin</string>
     <string name="action_settings">Settings</string>
 
@@ -8,8 +7,6 @@
     <string name="first_fragment_label">Первый фрагмент</string>
     <string name="second_fragment_label">Второй фрагмент</string>
     <string name="third_fragment_label">Третий фрагмент</string>
-
-
     <string name="textview_first_text">Друзья, добро пожаловать!</string>
     <string name="button_first_text">Войти</string>
     <string name="button_second_text">Далее</string>
@@ -23,9 +20,9 @@
         <item>Змея</item>
     </string-array>
 
-    <string-array name="cars">
-        <item>Ауди</item>
-        <item>БМВ</item>
-        <item>Мерседес</item>
+    <string-array name="animal">
+        <item>Подвиды</item>
+        <item>Органы</item>
+        <item>Питание</item>
     </string-array>
 </resources>

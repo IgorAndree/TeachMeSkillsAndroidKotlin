@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="10dp"
     android:orientation="vertical"
     tools:context=".SecondFragment">
 
-
     <Spinner
-
         android:id="@+id/spinner"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:entries="@array/animals" />
 
     <ListView
-
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="190dp" />
-
+        android:layout_height="190dp"
+        android:entries="@array/animal" />
 
     <Button
-
         android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,14 +29,11 @@
         android:text="@string/button_second_text"
         android:textColor="@color/black" />
 
-
     <Button
-
         android:id="@+id/button_second_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/my_one_color"
         android:text="@string/button_third_text"
-        android:textColor="@color/black" />
-
+        android:textColor="@color/white" />
 </LinearLayout>

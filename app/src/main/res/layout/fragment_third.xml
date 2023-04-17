@@ -1,44 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:orientation="vertical"
     tools:context=".ThirdFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-    <TextView
-        android:id="@+id/text_recycler1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1234"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/text_recycler2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ABCD"
-        android:textColor="@color/my_one_color" />
-
     <Button
-
         android:id="@+id/button_third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_two_color"
+        android:backgroundTint="@color/my_one_color"
         android:text="@string/button_third_text"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -11,20 +11,20 @@ class RecyclerAdapter(private val items: List<String>) :
     RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val largeTextView: TextView = itemView.findViewById(R.id.text_recycler1)
-        val smallTextView: TextView = itemView.findViewById(R.id.text_recycler2)
+        val largeTextView: TextView = itemView.findViewById(R.id.text_item_1)
+        val smallTextView: TextView = itemView.findViewById(R.id.text_item_2)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.fragment_third, parent, false)
+            .inflate(R.layout.recycler_items, parent, false)
         return MyViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.apply {
             largeTextView.text = items[position]
-            smallTextView.text = "test"
+            smallTextView.text = "Показать"
         }
     }
 

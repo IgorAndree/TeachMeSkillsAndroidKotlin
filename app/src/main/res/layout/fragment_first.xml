@@ -1,70 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.constraintlayout.widget.ConstraintLayout
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FirstFragment">
 
     <TextView
-
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/textview_first_text"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:textColor="@color/my_one_color"
-
-        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/edit_text_name"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-
         android:id="@+id/edit_text_name"
         android:layout_width="270dp"
         android:layout_height="60dp"
+        android:autofillHints="no"
         android:hint="@string/hint_first"
         android:inputType="none"
-        android:autofillHints="no"
-
-        app:layout_constraintTop_toTopOf="@id/textview_first"
         app:layout_constraintBottom_toBottomOf="@id/edit_text_password"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/textview_first" />
 
     <EditText
-
         android:id="@+id/edit_text_password"
         android:layout_width="250dp"
         android:layout_height="60dp"
+        android:autofillHints="no"
         android:hint="@string/hint_second"
         android:inputType="textPassword"
-        android:autofillHints="no"
-
-        app:layout_constraintTop_toTopOf="@id/edit_text_name"
         app:layout_constraintBottom_toBottomOf="@id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/edit_text_name" />
 
     <Button
-
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/my_two_color"
         android:text="@string/button_first_text"
         android:textColor="@color/black"
-        android:backgroundTint="@color/my_two_color"
-
-        app:layout_constraintTop_toTopOf="@id/edit_text_password"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:layout_constraintTop_toTopOf="@id/edit_text_password" />
 </androidx.constraintlayout.widget.ConstraintLayout>
