@@ -7,14 +7,14 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
     android:orientation="vertical"
-    tools:context=".ThirdFragment">
+    tools:context=".RecyclerFragment">
 
     <Button
-        android:id="@+id/button_third"
+        android:id="@+id/button_recycler_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_one_color"
-        android:text="@string/button_third_text"
+        android:backgroundTint="@color/my_color_button_back"
+        android:text="@string/button_feed_and_recycler_text"
         android:textColor="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView

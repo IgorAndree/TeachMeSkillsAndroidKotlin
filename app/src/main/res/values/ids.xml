@@ -2,4 +2,7 @@
 <resources>
     <item name="container" type="id" />
     <item name="ThirdFragment" type="id" />
+    <item name="image_view" type="id" />
+    <item name="title_text_view" type="id" />
+    <item name="description_text_view" type="id" />
 </resources>

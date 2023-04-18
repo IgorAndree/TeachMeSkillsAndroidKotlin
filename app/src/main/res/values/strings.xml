@@ -1,26 +1,26 @@
 <resources>
-    <string name="app_name">TeachMeSkillsAndroidKotlin</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Ш.И.А.</string>
+    <string name="action_settings">Настройки</string>
 
     <!-- Strings used for fragments for navigation -->
 
-    <string name="first_fragment_label">Первый фрагмент</string>
-    <string name="second_fragment_label">Второй фрагмент</string>
-    <string name="third_fragment_label">Третий фрагмент</string>
-    <string name="textview_first_text">Друзья, добро пожаловать!</string>
-    <string name="button_first_text">Войти</string>
-    <string name="button_second_text">Далее</string>
-    <string name="button_third_text">Назад</string>
-    <string name="hint_first">Введите пожалуйста своё имя</string>
-    <string name="hint_second">Введите пожалуйста пароль</string>
+    <string name="login_fragment_label">Регистрация</string>
+    <string name="feed_fragment_label">Виды</string>
+    <string name="recycler_fragment_label">Картинки</string>
+    <string name="textview_login_text">Друзья, добро пожаловать!</string>
+    <string name="button_login_text">Войти</string>
+    <string name="button_feed_text">Далее</string>
+    <string name="button_feed_and_recycler_text">Назад</string>
+    <string name="hint_name_login_text">Введите пожалуйста своё имя</string>
+    <string name="hint_password_login_text">Введите пожалуйста пароль</string>
 
-    <string-array name="animals">
+    <string-array name="for_spinner">
         <item>Кот</item>
         <item>Рыба</item>
         <item>Змея</item>
     </string-array>
 
-    <string-array name="animal">
+    <string-array name="for_list">
         <item>Подвиды</item>
         <item>Органы</item>
         <item>Питание</item>

@@ -9,10 +9,10 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.teachmeskillsandroidkotlin.databinding.FragmentSecondBinding
+import com.example.teachmeskillsandroidkotlin.databinding.FragmentFeedBinding
 
-class SecondFragment : Fragment() {
-    private var _binding: FragmentSecondBinding? = null
+class FeedFragment : Fragment() {
+    private var _binding: FragmentFeedBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,7 +20,7 @@ class SecondFragment : Fragment() {
         Bundle?
     ): View {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentFeedBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -29,12 +29,13 @@ class SecondFragment : Fragment() {
 
         initMyFun()
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+        binding.buttonFeedNext.setOnClickListener {
+            findNavController().navigate(R.id.action_FeedFragment_to_RecyclerFragment)
         }
 
-        binding.buttonSecondBack.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
+        binding.buttonFeedBack.setOnClickListener {
+            findNavController().navigate(R.id.action_FeedFragment_to_LoginFragment)
+
         }
     }
     private fun initMyFun(){
@@ -49,7 +50,7 @@ class SecondFragment : Fragment() {
                 parent: AdapterView<*>?,
                 itemSelected: View, selectedItemPosition: Int, selectedId: Long
             ) {
-                val choose = resources.getStringArray(R.array.animals)
+                val choose = resources.getStringArray(R.array.for_spinner)
                 val toast = Toast.makeText(
                     requireContext(),
                     choose[selectedItemPosition],
@@ -66,10 +67,11 @@ class SecondFragment : Fragment() {
 
     private fun initListView() {
         val adapter = ArrayAdapter.createFromResource(
-            requireContext(), R.array.animal,
+            requireContext(), R.array.for_list,
             android.R.layout.simple_list_item_1
         )
 
-        binding.listView.adapter = adapter
+        binding.list.adapter = adapter
+
     }
 }

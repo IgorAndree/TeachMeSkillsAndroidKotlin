@@ -5,42 +5,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/LoginFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/LoginFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.LoginFragment"
+        android:label="@string/login_fragment_label"
+        tools:layout="@layout/fragment_login">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_LoginFragment_to_FeedFragment"
+            app:destination="@id/FeedFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/FeedFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.FeedFragment"
+        android:label="@string/feed_fragment_label"
+        tools:layout="@layout/fragment_feed">
 
         <action
-            android:id="@+id/action_SecondFragment_to_ThirdFragment"
-            app:destination="@id/ThirdFragment"/>
+            android:id="@+id/action_FeedFragment_to_RecyclerFragment"
+            app:destination="@id/RecyclerFragment"/>
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_FeedFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/ThirdFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.ThirdFragment"
-        android:label="@string/third_fragment_label"
-        tools:layout="@layout/fragment_third">
+        android:id="@+id/RecyclerFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.RecyclerFragment"
+        android:label="@string/recycler_fragment_label"
+        tools:layout="@layout/fragment_recycler">
 
         <action
-            android:id="@+id/action_ThirdFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_RecyclerFragment_to_FeedFragment"
+            app:destination="@id/FeedFragment" />
     </fragment>
 </navigation>

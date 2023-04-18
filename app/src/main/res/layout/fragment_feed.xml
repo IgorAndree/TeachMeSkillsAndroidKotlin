@@ -7,33 +7,33 @@
     android:layout_height="match_parent"
     android:layout_marginTop="10dp"
     android:orientation="vertical"
-    tools:context=".SecondFragment">
+    tools:context=".FeedFragment">
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:entries="@array/animals" />
+        android:entries="@array/for_spinner" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:entries="@array/animal" />
+        android:entries="@array/for_list" />
 
     <Button
-        android:id="@+id/button_second"
+        android:id="@+id/button_feed_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_two_color"
-        android:text="@string/button_second_text"
+        android:backgroundTint="@color/my_color_button_next"
+        android:text="@string/button_feed_text"
         android:textColor="@color/black" />
 
     <Button
-        android:id="@+id/button_second_back"
+        android:id="@+id/button_feed_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_one_color"
-        android:text="@string/button_third_text"
+        android:backgroundTint="@color/my_color_button_back"
+        android:text="@string/button_feed_and_recycler_text"
         android:textColor="@color/white" />
 </LinearLayout>
