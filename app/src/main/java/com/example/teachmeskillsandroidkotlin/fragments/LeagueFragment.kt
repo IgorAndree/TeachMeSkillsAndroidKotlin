@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.adapters.MyCustomRecyclerAdapter
 import com.example.teachmeskillsandroidkotlin.data.LeagueData
-import com.example.teachmeskillsandroidkotlin.data.models.LeagueModel
 import com.example.teachmeskillsandroidkotlin.databinding.FragmentLeagueBinding
 
 class LeagueFragment : Fragment() {
@@ -32,7 +31,7 @@ class LeagueFragment : Fragment() {
         initMyFun()
 
         binding.buttonFeedNext.setOnClickListener {
-            findNavController().navigate(R.id.action_LeagueFragment_to_RecyclerFragment)
+            findNavController().navigate(R.id.action_LeagueFragment_to_ClubFragment)
         }
 
         binding.buttonFeedBack.setOnClickListener {
@@ -47,7 +46,7 @@ class LeagueFragment : Fragment() {
     private fun initRecycler() {
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MyCustomRecyclerAdapter(LeagueData().elements(LeagueModel))
+            adapter = MyCustomRecyclerAdapter(LeagueData().elements())
         }
     }
 }

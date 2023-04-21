@@ -10,15 +10,13 @@ import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.data.models.LeagueModel
 
 class MyCustomRecyclerAdapter(
-    private val images: List<LeagueModel>, private val titles: Array<String>,
-    private val descriptions: Array<String>
-) :
+    private val items: List<LeagueModel>) :
     RecyclerView.Adapter<MyCustomRecyclerAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.imageView)
-        val titleView: TextView = itemView.findViewById(R.id.titleView)
-        val descriptionView: TextView = itemView.findViewById(R.id.descriptionView)
+     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView:ImageView = itemView.findViewById(R.id.image)
+        val titleTextView: TextView = itemView.findViewById(R.id.title)
+        val descriptionTextView: TextView = itemView.findViewById(R.id.description)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,12 +28,14 @@ class MyCustomRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.imageView.setImageResource(images[position])
-        holder.titleView.text = titles[position]
-        holder.descriptionView.text = descriptions[position]
+        holder.apply {
+            imageView.drawable
+            titleTextView.text = items[position].title
+            descriptionTextView.text = items[position].description
+        }
     }
 
     override fun getItemCount(): Int {
-        return images.size
+        return items.size
     }
 }

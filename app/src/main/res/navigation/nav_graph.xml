@@ -23,8 +23,8 @@
         tools:layout="@layout/fragment_league">
 
         <action
-            android:id="@+id/action_LeagueFragment_to_RecyclerFragment"
-            app:destination="@id/RecyclerFragment"/>
+            android:id="@+id/action_LeagueFragment_to_ClubFragment"
+            app:destination="@id/ClubFragment"/>
 
         <action
             android:id="@+id/action_LeagueFragment_to_LoginFragment"
@@ -32,12 +32,12 @@
     </fragment>
 
     <fragment
-        android:id="@+id/RecyclerFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.RecyclerFragment"
+        android:id="@+id/ClubFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.fragments.ClubFragment"
         tools:layout="@layout/fragment_club">
 
         <action
-            android:id="@+id/action_RecyclerFragment_to_LeagueFragment"
+            android:id="@+id/action_ClubFragment_to_LeagueFragment"
             app:destination="@id/LeagueFragment" />
     </fragment>
 </navigation>
