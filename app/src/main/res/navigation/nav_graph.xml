@@ -9,38 +9,35 @@
 
     <fragment
         android:id="@+id/LoginFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.LoginFragment"
-        android:label="@string/login_fragment_label"
+        android:name="com.example.teachmeskillsandroidkotlin.fragments.LoginFragment"
         tools:layout="@layout/fragment_login">
 
         <action
-            android:id="@+id/action_LoginFragment_to_FeedFragment"
-            app:destination="@id/FeedFragment" />
+            android:id="@+id/action_LoginFragment_to_LeagueFragment"
+            app:destination="@id/LeagueFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/FeedFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.FeedFragment"
-        android:label="@string/feed_fragment_label"
-        tools:layout="@layout/fragment_feed">
+        android:id="@+id/LeagueFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.fragments.LeagueFragment"
+        tools:layout="@layout/fragment_league">
 
         <action
-            android:id="@+id/action_FeedFragment_to_RecyclerFragment"
+            android:id="@+id/action_LeagueFragment_to_RecyclerFragment"
             app:destination="@id/RecyclerFragment"/>
 
         <action
-            android:id="@+id/action_FeedFragment_to_LoginFragment"
+            android:id="@+id/action_LeagueFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/RecyclerFragment"
         android:name="com.example.teachmeskillsandroidkotlin.RecyclerFragment"
-        android:label="@string/recycler_fragment_label"
-        tools:layout="@layout/fragment_recycler">
+        tools:layout="@layout/fragment_club">
 
         <action
-            android:id="@+id/action_RecyclerFragment_to_FeedFragment"
-            app:destination="@id/FeedFragment" />
+            android:id="@+id/action_RecyclerFragment_to_LeagueFragment"
+            app:destination="@id/LeagueFragment" />
     </fragment>
 </navigation>

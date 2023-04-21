@@ -7,9 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teachmeskillsandroidkotlin.R
+import com.example.teachmeskillsandroidkotlin.data.models.LeagueModel
 
 class MyCustomRecyclerAdapter(
-    private val images: Array<Int>, private val titles: Array<String>,
+    private val images: List<LeagueModel>, private val titles: Array<String>,
     private val descriptions: Array<String>
 ) :
     RecyclerView.Adapter<MyCustomRecyclerAdapter.ViewHolder>() {
