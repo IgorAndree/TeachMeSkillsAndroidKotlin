@@ -11,6 +11,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="blue">#0072FF</color>
+    <color name="gold">#FFD500</color>
     <color name="my_color_button_back">#3E605A</color>
     <color name="my_color_button_next">#A4ECA2</color>
 </resources>

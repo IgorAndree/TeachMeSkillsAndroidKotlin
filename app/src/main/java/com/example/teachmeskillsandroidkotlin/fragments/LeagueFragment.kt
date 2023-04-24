@@ -39,12 +39,14 @@ class LeagueFragment : Fragment() {
 
         }
     }
-    private fun initMyFun(){
+
+    private fun initMyFun() {
 
         initRecycler()
     }
+
     private fun initRecycler() {
-        binding.recyclerView.apply {
+        binding.leagueRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = MyCustomRecyclerAdapter(LeagueData().elements())
         }

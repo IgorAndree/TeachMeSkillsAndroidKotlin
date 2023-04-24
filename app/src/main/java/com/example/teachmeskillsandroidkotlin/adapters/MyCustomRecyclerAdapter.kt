@@ -5,16 +5,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.data.models.LeagueModel
+import com.example.teachmeskillsandroidkotlin.fragments.ClubFragment
 
 class MyCustomRecyclerAdapter(
-    private val items: List<LeagueModel>) :
+    private val items: List<LeagueModel>
+) :
     RecyclerView.Adapter<MyCustomRecyclerAdapter.ViewHolder>() {
 
-     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView:ImageView = itemView.findViewById(R.id.image)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: ImageView = itemView.findViewById(R.id.image)
         val titleTextView: TextView = itemView.findViewById(R.id.title)
         val descriptionTextView: TextView = itemView.findViewById(R.id.description)
     }
@@ -29,9 +32,15 @@ class MyCustomRecyclerAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.apply {
-            imageView.drawable
+            imageView.setImageResource(items[position].image)
             titleTextView.text = items[position].title
             descriptionTextView.text = items[position].description
+            imageView.setOnClickListener { v ->
+                val activity = v!!.context as AppCompatActivity
+                val fragmentClub = ClubFragment()
+                activity.supportFragmentManager.beginTransaction()
+                    .replace(R.id.image, fragmentClub).addToBackStack(null).commit()
+            }
         }
     }
 

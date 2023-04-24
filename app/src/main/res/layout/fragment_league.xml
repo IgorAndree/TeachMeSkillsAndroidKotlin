@@ -5,11 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/login_top_euro_leagues"
+    android:orientation="vertical"
     tools:context=".fragments.LeagueFragment">
-
-
 
     <Button
         android:id="@+id/button_feed_next"
@@ -28,7 +26,7 @@
         android:textColor="@color/white" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/league_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

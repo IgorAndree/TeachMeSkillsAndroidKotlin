@@ -1,44 +1,44 @@
 package com.example.teachmeskillsandroidkotlin.data
 
+import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.data.models.LeagueModel
 
 open class LeagueData {
 
     open fun elements(): List<LeagueModel> {
 
-        val leagues = mutableListOf(
+        return mutableListOf(
             LeagueModel(
                 id = 1,
-                imageId = 1,
-                title = "Test Post Title",
-                description = "Test Post Description"
+                image = R.drawable.epl_logo,
+                title = "EPL",
+                description = "English Premier League"
             ),
             LeagueModel(
                 id = 2,
-                imageId = 2,
-                title = "Test Post Title",
-                description = "Test Post Description"
+                image = R.drawable.laliga_santander_logo,
+                title = "Liga BBVA",
+                description = "Spanish LaLiga"
             ),
             LeagueModel(
                 id = 3,
-                imageId = 3,
-                title = "Test Post Title",
-                description = "Test Post Description"
+                image = R.drawable.bundesliga_logo,
+                title = "Bundesliga",
+                description = "German Bundesliga"
             ),
             LeagueModel(
                 id = 4,
-                imageId = 4,
-                title = "Test Post Title",
-                description = "Test Post Description"
+                image = R.drawable.serie_a_logo,
+                title = "Serie-A",
+                description = "Italian Serie A"
             ),
             LeagueModel(
                 id = 5,
-                imageId = 5,
-                title = "Test Post Title",
-                description = "Test Post Description"
+                image = R.drawable.ligue1_uber_eats_logo,
+                title = "Ligue 1,Uber Eats",
+                description = "French League 1"
             )
         )
-        return leagues
     }
 }
 
