@@ -5,16 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teachmeskillsandroidkotlin.R
-import com.example.teachmeskillsandroidkotlin.data.models.LeagueModel
-import com.example.teachmeskillsandroidkotlin.fragments.ClubFragment
+import com.example.teachmeskillsandroidkotlin.data.models.LeagueAndClubModel
 
 class MyCustomRecyclerAdapter(
-    private val items: List<LeagueModel>
-) :
-    RecyclerView.Adapter<MyCustomRecyclerAdapter.ViewHolder>() {
+    private val items: List<LeagueAndClubModel>
+) : RecyclerView.Adapter<MyCustomRecyclerAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.image)
@@ -35,12 +32,6 @@ class MyCustomRecyclerAdapter(
             imageView.setImageResource(items[position].image)
             titleTextView.text = items[position].title
             descriptionTextView.text = items[position].description
-            imageView.setOnClickListener { v ->
-                val activity = v!!.context as AppCompatActivity
-                val fragmentClub = ClubFragment()
-                activity.supportFragmentManager.beginTransaction()
-                    .replace(R.id.image, fragmentClub).addToBackStack(null).commit()
-            }
         }
     }
 
@@ -48,3 +39,4 @@ class MyCustomRecyclerAdapter(
         return items.size
     }
 }
+

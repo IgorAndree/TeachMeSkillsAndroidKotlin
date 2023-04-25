@@ -18,8 +18,7 @@ class LeagueFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState:
-        Bundle?
-    ): View {
+        Bundle?): View {
 
         _binding = FragmentLeagueBinding.inflate(inflater, container, false)
         return binding.root
@@ -30,18 +29,16 @@ class LeagueFragment : Fragment() {
 
         initMyFun()
 
-        binding.buttonFeedNext.setOnClickListener {
+        binding.buttonNext.setOnClickListener {
             findNavController().navigate(R.id.action_LeagueFragment_to_ClubFragment)
         }
 
-        binding.buttonFeedBack.setOnClickListener {
+        binding.buttonBack.setOnClickListener {
             findNavController().navigate(R.id.action_LeagueFragment_to_LoginFragment)
-
         }
     }
 
     private fun initMyFun() {
-
         initRecycler()
     }
 

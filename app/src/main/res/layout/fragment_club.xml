@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@drawable/background_item_league"
     tools:context=".fragments.ClubFragment">
 
-    <Button
-        android:id="@+id/button_recycler_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/my_color_button_back"
-        android:text="@string/button_feed_and_recycler_text"
-        android:textColor="@color/white" />
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="12345676"/>
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_club"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/my_color_button_back"
+        app:title="@string/toolbar_club_back_text"
+        app:titleTextColor="@color/white"
+        android:elevation="5dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/club_recycler"

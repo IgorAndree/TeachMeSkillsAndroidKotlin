@@ -1,13 +1,16 @@
 <resources>
-    <string name="app_name">Fotball League</string>
+    <string name="app_name">Football League</string>
     <string name="action_settings">Settings</string>
 
     <!-- Strings used for fragments for navigation -->
-
-    <string name="textview_login_text">Please register</string>
+    <string name="textview_login_text">Please Register</string>
     <string name="button_login_text">Login</string>
-    <string name="button_feed_text">Next</string>
-    <string name="button_feed_and_recycler_text">Back</string>
+    <string name="button_league_next_text">Next to Clubs</string>
+    <string name="button_league_back_text">Back to Registration</string>
     <string name="hint_name_login_text">Please enter your name</string>
-    <string name="hint_password_login_text">Please enter a password</string>
+    <string name="hint_password_login_text">Please enter password</string>
+    <string name="toolbar_club_back_text">Back to Leagues</string>
+
+    <!-- Strings splashActivity -->
+    <string name="text_splash_activity">Loading…</string>
 </resources>
