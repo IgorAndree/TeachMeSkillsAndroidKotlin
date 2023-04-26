@@ -50,7 +50,7 @@
         tools:text="description" />
 
     <ImageView
-        android:id="@+id/iv_like"
+        android:id="@+id/like_mini_logos"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="centerInside"
@@ -62,26 +62,26 @@
         tools:ignore="ContentDescription"/>
 
     <ImageView
-        android:id="@+id/iv_reply"
+        android:id="@+id/reply_mini_logos"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="centerInside"
         android:layout_margin="10dp"
         android:src="@drawable/rpl"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/iv_comment"
+        app:layout_constraintEnd_toStartOf="@id/comment_mini_logos"
         tools:src="@drawable/rpl"
         tools:ignore="ContentDescription"/>
 
     <ImageView
-        android:id="@+id/iv_comment"
+        android:id="@+id/comment_mini_logos"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:scaleType="centerInside"
         android:layout_margin="10dp"
         android:src="@drawable/comment_mini_logos"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/iv_like"
+        app:layout_constraintEnd_toStartOf="@id/like_mini_logos"
         tools:src="@drawable/comment_mini_logos"
         tools:ignore="ContentDescription"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,7 +13,7 @@ import com.example.teachmeskillsandroidkotlin.adapters.MyCustomRecyclerAdapter
 import com.example.teachmeskillsandroidkotlin.data.LeagueData
 import com.example.teachmeskillsandroidkotlin.databinding.FragmentLeagueBinding
 
-class LeagueFragment : Fragment() {
+class LeagueFragment : Fragment(),MyCustomRecyclerAdapter.LeagueAndClubListener {
     private var _binding: FragmentLeagueBinding? = null
     private val binding get() = _binding!!
 
@@ -45,7 +46,13 @@ class LeagueFragment : Fragment() {
     private fun initRecycler() {
         binding.leagueRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = MyCustomRecyclerAdapter(LeagueData().elements())
+            adapter = MyCustomRecyclerAdapter(LeagueData().elements(),this@LeagueFragment)
         }
+    }
+
+    override fun onClick(itemView: View) {
+        Toast.makeText(context,
+            "At the top of the button go to the clubs or return to registration!!!",
+            Toast.LENGTH_SHORT).show()
     }
 }

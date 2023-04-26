@@ -7,10 +7,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/ic_launcher_football_league_foreground"
-    tools:context=".activity.SplashActivity">
+    tools:context=".activity.PlashActivity">
 
     <TextView
-        android:id="@+id/splash_text_loading"
+        android:id="@+id/plash_text_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_splash_activity"
@@ -25,10 +25,10 @@
         app:layout_constraintVertical_bias="0.834" />
 
     <ProgressBar
-        android:id="@+id/splash_progress_loading"
+        android:id="@+id/plash_progress_loading"
         android:layout_width="129dp"
         android:layout_height="95dp"
-        app:layout_constraintBottom_toTopOf="@+id/splash_text_loading"
+        app:layout_constraintBottom_toTopOf="@+id/plash_text_loading"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
