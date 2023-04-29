@@ -11,6 +11,12 @@
     <string name="hint_password_login_text">Please enter password</string>
     <string name="toolbar_club_back_text">Back to Leagues</string>
 
+    <!-- Strings for TestNavigationFragmentManager -->
+    <string name="test_click_text">Click to go</string>
+    <string name="test_nav_to_text">To</string>
+    <string name="test_nav_back_text">Back</string>
+
+
     <!-- Strings splashActivity -->
     <string name="text_splash_activity">Loading…</string>
 </resources>
