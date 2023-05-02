@@ -12,9 +12,9 @@
     <string name="toolbar_club_back_text">Back to Leagues</string>
 
     <!-- Strings for TestNavigationFragmentManager -->
-    <string name="test_click_text">Click to go</string>
-    <string name="test_nav_to_text">To</string>
-    <string name="test_nav_back_text">Back</string>
+    <string name="test_click_text">Click</string>
+    <string name="test_nav_to_text">Go to One</string>
+    <string name="test_nav_back_text">Go to Two</string>
 
 
     <!-- Strings splashActivity -->

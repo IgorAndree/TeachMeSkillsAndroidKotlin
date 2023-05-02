@@ -41,18 +41,4 @@
             app:destination="@id/LeagueFragment" />
     </fragment>
 
-
-    <fragment
-        android:id="@+id/TestOneFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.fragments.TestOneFragment"
-        android:label="123"
-        tools:layout="@layout/fragment_test_one">
-    </fragment>
-
-    <fragment
-        android:id="@+id/TestTwoFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.fragments.TestTwoFragment"
-        android:label="ABC"
-        tools:layout="@layout/fragment_test_two">
-    </fragment>
 </navigation>

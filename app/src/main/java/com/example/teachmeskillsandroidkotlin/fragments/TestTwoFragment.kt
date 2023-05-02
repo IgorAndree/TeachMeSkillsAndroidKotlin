@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.databinding.FragmentTestTwoBinding
-
 
 
 class TestTwoFragment : Fragment() {
@@ -33,7 +33,18 @@ class TestTwoFragment : Fragment() {
 
     private fun initButton() {
         binding.buttonTwoClick.setOnClickListener {
+            goTwoFragment()
+        }
+
+        binding.buttonTwoClick.setOnClickListener {
             Toast.makeText(context, "This is Test two fragment", Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun goTwoFragment() {
+        parentFragmentManager
+            .beginTransaction()
+            .replace(R.id.test_container, TestOneFragment())
+            .commit()
     }
 }

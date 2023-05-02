@@ -10,7 +10,7 @@ import com.example.teachmeskillsandroidkotlin.fragments.TestOneFragment
 import com.example.teachmeskillsandroidkotlin.fragments.TestTwoFragment
 
 class FootballLeagueMainActivity : AppCompatActivity() {
-//    private lateinit var binding: ActivityMainFootballLeagueBinding
+    //    private lateinit var binding: ActivityMainFootballLeagueBinding
     private lateinit var binding: ActivityTestBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,19 +23,17 @@ class FootballLeagueMainActivity : AppCompatActivity() {
         binding = ActivityTestBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.navigateTo.setOnClickListener {
-            addFragment(fragment = TestOneFragment())
+        binding.navigateToOne.setOnClickListener {
+            goFragment(fragment = TestOneFragment())
         }
 
-        binding.navigateBack.setOnClickListener {
-            addFragment(fragment = TestTwoFragment())
+        binding.navigateToTwo.setOnClickListener {
+            goFragment(fragment = TestTwoFragment())
         }
     }
 
-    private fun addFragment(fragment: Fragment) {
-        val fragmentManager = supportFragmentManager
-        fragmentManager
+    private fun goFragment(fragment: Fragment) {
+        supportFragmentManager
             .beginTransaction()
             .add(R.id.test_container, fragment)
             .commit()
