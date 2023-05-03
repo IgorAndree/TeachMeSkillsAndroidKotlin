@@ -9,16 +9,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.data.models.LeagueAndClubModel
 
-class MyCustomRecyclerAdapter(
-    private val items: List<LeagueAndClubModel>, private val listener:LeagueAndClubListener
-) : RecyclerView.Adapter<MyCustomRecyclerAdapter.ViewHolder>() {
+class LeagueAndClubRecyclerAdapter(
+    private val items: List<LeagueAndClubModel>,
+    private val listener: LeagueAndClubListener
+) : RecyclerView.Adapter<LeagueAndClubRecyclerAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.image)
         val titleTextView: TextView = itemView.findViewById(R.id.title)
         val descriptionTextView: TextView = itemView.findViewById(R.id.description)
 
-        fun bind(itemView: View,listener: LeagueAndClubListener){
+        fun bind(itemView: View, listener: LeagueAndClubListener) {
             itemView.setOnClickListener {
                 listener.onClick(itemView)
             }
@@ -30,6 +31,8 @@ class MyCustomRecyclerAdapter(
             R.layout.item_layout, parent,
             false
         )
+
+
         return ViewHolder(view)
     }
 
@@ -39,16 +42,17 @@ class MyCustomRecyclerAdapter(
             titleTextView.text = items[position].title
             descriptionTextView.text = items[position].description
 
-            holder.bind(imageView,listener)
-            }
+            holder.bind(imageView, listener)
         }
+    }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
-    interface LeagueAndClubListener{
+    interface LeagueAndClubListener {
         fun onClick(itemView: View)
     }
 }
+
 

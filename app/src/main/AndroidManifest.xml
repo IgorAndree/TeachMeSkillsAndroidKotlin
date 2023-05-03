@@ -19,7 +19,7 @@
             android:theme="@style/Theme.TeachMeSkillsAndroidKotlin.NoActionBar" />
 
         <activity
-            android:name=".activity.PlashActivity"
+            android:name=".activity.SplashActivity"
             android:exported="true">
 
             <intent-filter>
