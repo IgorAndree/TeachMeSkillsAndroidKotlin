@@ -1,4 +1,4 @@
-package com.example.teachmeskillsandroidkotlin.fragments
+package com.example.teachmeskillsandroidkotlin.presentation.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +15,8 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root

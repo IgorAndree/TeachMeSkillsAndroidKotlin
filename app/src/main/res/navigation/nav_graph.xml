@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/LoginFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.fragments.LoginFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.presentation.fragments.LoginFragment"
         tools:layout="@layout/fragment_login">
 
         <action
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/LeagueFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.fragments.LeagueFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.presentation.fragments.LeagueFragment"
         tools:layout="@layout/fragment_league">
 
         <action
@@ -33,7 +33,7 @@
 
     <fragment
         android:id="@+id/ClubFragment"
-        android:name="com.example.teachmeskillsandroidkotlin.fragments.ClubFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.presentation.fragments.ClubFragment"
         tools:layout="@layout/fragment_club">
 
         <action

@@ -1,4 +1,4 @@
-package com.example.teachmeskillsandroidkotlin.activity
+package com.example.teachmeskillsandroidkotlin.presentation.activity
 
 import android.content.Intent
 import android.os.Bundle
