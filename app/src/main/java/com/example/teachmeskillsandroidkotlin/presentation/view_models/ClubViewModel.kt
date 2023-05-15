@@ -5,8 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
 import com.example.teachmeskillsandroidkotlin.domain.use_cases.GetPostInfoUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-open class ClubViewModel : ViewModel() {
+@HiltViewModel
+ open class ClubViewModel @Inject constructor(
+    private val getPostInfoUseCase : GetPostInfoUseCase
+)  : ViewModel() {
 
     private val _postInfo = MutableLiveData<DomainPost>()
     val postInfo: LiveData<DomainPost> = _postInfo
@@ -16,6 +21,6 @@ open class ClubViewModel : ViewModel() {
     }
 
     private fun getPostInfo() {
-        _postInfo.value = GetPostInfoUseCase().getPostInfo()
+        _postInfo.value = getPostInfoUseCase.getPostInfo()
     }
 }

@@ -5,8 +5,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.teachmeskillsandroidkotlin.domain.models.DomainPostList
 import com.example.teachmeskillsandroidkotlin.domain.use_cases.PostsUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-open class LeagueViewModel : ViewModel() {
+@HiltViewModel
+ open class LeagueViewModel @Inject constructor(
+    private val postsUseCase: PostsUseCase
+) : ViewModel() {
 
     private val _postList = MutableLiveData<DomainPostList>()
     val postList: LiveData<DomainPostList> = _postList
@@ -16,6 +21,6 @@ open class LeagueViewModel : ViewModel() {
     }
 
     private fun getPosts() {
-        _postList.value = PostsUseCase().getPosts()
+        _postList.value = postsUseCase.getPosts()
     }
 }

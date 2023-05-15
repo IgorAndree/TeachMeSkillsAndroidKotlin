@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teachmeskillsandroidkotlin.R
@@ -13,17 +13,15 @@ import com.example.teachmeskillsandroidkotlin.databinding.FragmentLeagueBinding
 import com.example.teachmeskillsandroidkotlin.domain.models.DomainPostList
 import com.example.teachmeskillsandroidkotlin.presentation.adapters.LeagueAndClubRecyclerAdapter
 import com.example.teachmeskillsandroidkotlin.presentation.view_models.LeagueViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LeagueFragment : Fragment() {
     private var _binding: FragmentLeagueBinding? = null
     private val binding get() = _binding!!
-    private var viewModel: LeagueViewModel? = null
+    private val viewModel: LeagueViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(owner = this)[LeagueViewModel::class.java]
 
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState:
@@ -53,7 +51,7 @@ class LeagueFragment : Fragment() {
     }
 
     private fun initRecycler() {
-        val posts = viewModel?.postList?.value ?: DomainPostList()
+        val posts = viewModel.postList.value ?: DomainPostList()
 
         binding.leagueRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
