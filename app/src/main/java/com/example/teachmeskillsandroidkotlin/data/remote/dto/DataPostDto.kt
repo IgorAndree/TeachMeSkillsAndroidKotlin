@@ -1,24 +1,30 @@
 package com.example.teachmeskillsandroidkotlin.data.remote.dto
 
 import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
-import com.example.teachmeskillsandroidkotlin.domain.models.DomainPostList
+import com.google.gson.annotations.SerializedName
 
 data class DataPostDto(
-    val id: Int,
-    val title: String? = null,
-    val description: String? = null
+    @SerializedName("title")
+    val title: String,
+
+    @SerializedName("description")
+    val description: String,
+
+    @SerializedName("url")
+    val url: String,
+
+    @SerializedName("urlToImage")
+    val urlToImage: String,
+
+    @SerializedName("publishedAt")
+    val publishedAt: String
 )
 
 fun DataPostDto.toDomainPost() =
     DomainPost(
-        id = id,
         title = title,
-        description = description
-    )
-
-fun List<DataPostDto>.toDomainPostList() =
-    DomainPostList(
-        this.map {
-            it.toDomainPost()
-        }
+        description = description,
+        url = url,
+        urlToImage = urlToImage,
+        publishedAt = publishedAt
     )

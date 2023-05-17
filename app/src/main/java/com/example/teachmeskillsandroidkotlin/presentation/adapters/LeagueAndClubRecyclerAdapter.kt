@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teachmeskillsandroidkotlin.R
-import com.example.teachmeskillsandroidkotlin.domain.models.DomainPostList
+import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
 
 class LeagueAndClubRecyclerAdapter(
-    private val items: DomainPostList,
+    private val items: List<DomainPost>,
     private val onItemClickEvent: (View) -> Unit
 ) : RecyclerView.Adapter<LeagueAndClubRecyclerAdapter.ViewHolder>() {
 
@@ -35,15 +35,13 @@ class LeagueAndClubRecyclerAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.apply {
-            titleTextView.text = items.posts[position].title
-            descriptionTextView.text = items.posts[position].description
-
-
+            titleTextView.text = items[position].title
+            descriptionTextView.text = items[position].description
         }
     }
 
     override fun getItemCount(): Int {
-        return items.posts.size
+        return items.size
     }
 }
 

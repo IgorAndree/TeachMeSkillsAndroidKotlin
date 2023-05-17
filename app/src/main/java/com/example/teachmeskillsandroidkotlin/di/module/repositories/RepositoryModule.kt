@@ -11,8 +11,6 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 class RepositoryModule {
-
-
     @Provides
     fun providePostsRepository(postsRemote: PostsRemote): PostRepository =
         PostsRepositoryImpl(postsRemote = postsRemote)

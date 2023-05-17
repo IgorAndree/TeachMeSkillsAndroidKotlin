@@ -10,32 +10,29 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.databinding.FragmentLeagueBinding
-import com.example.teachmeskillsandroidkotlin.domain.models.DomainPostList
+import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
 import com.example.teachmeskillsandroidkotlin.presentation.adapters.LeagueAndClubRecyclerAdapter
 import com.example.teachmeskillsandroidkotlin.presentation.view_models.LeagueViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LeagueFragment : Fragment() {
-    private var _binding: FragmentLeagueBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentLeagueBinding
     private val viewModel: LeagueViewModel by viewModels()
-
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState:
         Bundle?
     ): View {
 
-        _binding = FragmentLeagueBinding.inflate(inflater, container, false)
+        binding = FragmentLeagueBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initMyFun()
+        initFun()
 
         binding.buttonNext.setOnClickListener {
             findNavController().navigate(R.id.action_LeagueFragment_to_ClubFragment)
@@ -46,13 +43,17 @@ class LeagueFragment : Fragment() {
         }
     }
 
-    private fun initMyFun() {
-        initRecycler()
+    private fun initFun() {
+        observePosts()
     }
 
-    private fun initRecycler() {
-        val posts = viewModel.postList.value ?: DomainPostList()
+    private fun observePosts() {
+        viewModel.postList.observe(viewLifecycleOwner) { posts ->
+            initRecycler(posts)
+        }
+    }
 
+    private fun initRecycler(posts: List<DomainPost>) {
         binding.leagueRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = LeagueAndClubRecyclerAdapter(items = posts,

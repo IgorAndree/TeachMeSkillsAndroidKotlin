@@ -9,9 +9,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
- open class ClubViewModel @Inject constructor(
-    private val getPostInfoUseCase : GetPostInfoUseCase
-)  : ViewModel() {
+open class ClubViewModel @Inject constructor(
+    private val getPostInfoUseCase: GetPostInfoUseCase
+) : ViewModel() {
 
     private val _postInfo = MutableLiveData<DomainPost>()
     val postInfo: LiveData<DomainPost> = _postInfo
@@ -21,6 +21,6 @@ import javax.inject.Inject
     }
 
     private fun getPostInfo() {
-        _postInfo.value = getPostInfoUseCase.getPostInfo()
+        // _postInfo.value = getPostInfoUseCase.getPostInfo()
     }
 }
