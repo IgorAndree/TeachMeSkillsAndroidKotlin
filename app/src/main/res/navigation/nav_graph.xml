@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/LoginFragment">
+    app:startDestination="@id/TestCoroutinesFragment">
 
     <fragment
         android:id="@+id/LoginFragment"
@@ -39,5 +39,12 @@
         <action
             android:id="@+id/action_ClubFragment_to_LeagueFragment"
             app:destination="@id/LeagueFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TestCoroutinesFragment"
+        android:name="com.example.teachmeskillsandroidkotlin.presentation.fragments.TestCoroutinesFragment"
+        android:label="@string/test_coroutines_fragment_label"
+        tools:layout="@layout/test_coroutines_fragment">
     </fragment>
 </navigation>

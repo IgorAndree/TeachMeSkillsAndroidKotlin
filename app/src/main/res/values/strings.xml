@@ -10,6 +10,7 @@
     <string name="hint_name_login_text">Please enter your name</string>
     <string name="hint_password_login_text">Please enter password</string>
     <string name="toolbar_club_back_text">Back to Leagues</string>
+    <string name="test_coroutines_fragment_label">Test Coroutines Fragment</string>
 
     <!-- Strings splashActivity -->
     <string name="text_splash_activity">Loading…</string>
