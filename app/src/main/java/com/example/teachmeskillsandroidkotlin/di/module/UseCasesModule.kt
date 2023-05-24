@@ -7,14 +7,17 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 class UseCasesModule {
+    @Singleton
     @Provides
     fun providePostInfoUseCase(postRepository: PostRepository) =
         GetPostInfoUseCase(postRepository = postRepository)
 
+    @Singleton
     @Provides
     fun providePostsUseCase(postRepository: PostRepository) =
         PostsUseCase(postRepository = postRepository)
