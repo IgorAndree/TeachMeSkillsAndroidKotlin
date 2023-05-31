@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "617075282003",
+    "project_id": "teachmeskillsandroidkotlin",
+    "storage_bucket": "teachmeskillsandroidkotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617075282003:android:5e53d4ab20c956090bb6a6",
+        "android_client_info": {
+          "package_name": "com.example.teachmeskillsandroidkotlin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADvNAgDJqNj5vye2F8A0XUCzcQHnpWpGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
