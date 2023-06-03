@@ -56,7 +56,7 @@ class LeagueFragment : Fragment() {
     private fun initRecycler(posts: List<DomainPost>) {
         binding.leagueRecycler.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = LeagueAndClubRecyclerAdapter( items = posts,context = context,
+            adapter = LeagueAndClubRecyclerAdapter(items = posts, context = context,
                 onItemClickEvent = {
                     findNavController().navigate(R.id.action_LeagueFragment_to_ClubFragment)
                 }

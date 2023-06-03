@@ -1,5 +1,6 @@
 package com.example.teachmeskillsandroidkotlin.presentation.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.teachmeskillsandroidkotlin.R
 import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
-import android.content.Context
 
 class LeagueAndClubRecyclerAdapter(
     private var context: Context,

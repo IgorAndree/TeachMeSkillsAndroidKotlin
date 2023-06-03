@@ -10,15 +10,15 @@ interface PostsDao {
     @Query("SELECT * FROM PostEntity")
     suspend fun getAll(): List<PostEntity>?
 
-    @Query("SELECT * FROM PostEntity public WHERE id = :id")
-    suspend fun getById(id: Long): PostEntity?
+    @Query("SELECT * FROM PostEntity public WHERE id = :postId")
+    suspend fun getById(postId: Long): PostEntity?
 
     @Insert
-    suspend fun insert(post: PostEntity?)
+    suspend fun insert(postEntity: PostEntity?)
 
     @Update
-    suspend fun update(post: PostEntity?)
+    suspend fun update(postEntity: PostEntity?)
 
     @Delete
-    suspend fun delete(post: PostEntity?)
+    suspend fun delete(postEntity: PostEntity?)
 }

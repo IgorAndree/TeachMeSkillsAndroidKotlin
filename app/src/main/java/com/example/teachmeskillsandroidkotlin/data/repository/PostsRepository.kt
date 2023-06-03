@@ -5,7 +5,6 @@ import com.example.teachmeskillsandroidkotlin.data.remote.dto.DataPostDto
 
 interface PostsRepository {
     suspend fun getPosts(): List<DataPostDto>?
-    suspend fun getLocalPosts() : List<PostEntity>?
-
-    suspend fun getPostInfoFromLocal() : PostEntity?
+    suspend fun getLocalPosts(): List<PostEntity>?
+    suspend fun getPostInfoFromLocal(): PostEntity?
 }

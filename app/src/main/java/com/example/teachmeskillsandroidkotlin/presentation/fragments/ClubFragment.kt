@@ -31,34 +31,17 @@ class ClubFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        initFun()
-    }
+        super.onViewCreated(view, savedInstanceState)
 
-    private fun initFun() {
-        initRecycler()
-    }
-
-    private fun initRecycler() {
-        val postInfo = viewModel.postInfo.value ?: DomainPost()
-
-        binding.apply {
-            postTitle.text = postInfo.title
-            postDescription.text = postInfo.description
+        viewModel.postInfo.observe(viewLifecycleOwner) { postNewsInfo ->
+            showInfoFragment(postNewsInfo)
         }
     }
+
+    private fun showInfoFragment(postNewsInfo: DomainPost) {
+        binding.postTitle.text = postNewsInfo.title
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

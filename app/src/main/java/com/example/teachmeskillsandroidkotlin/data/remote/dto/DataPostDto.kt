@@ -29,6 +29,7 @@ fun DataPostDto.toDomainPost() =
         urlToImage = urlToImage,
         publishedAt = publishedAt
     )
+
 fun DataPostDto.toLocalPost() =
     PostEntity(
         title = title,

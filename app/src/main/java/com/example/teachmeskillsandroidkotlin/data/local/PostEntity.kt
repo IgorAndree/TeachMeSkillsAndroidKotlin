@@ -3,6 +3,7 @@ package com.example.teachmeskillsandroidkotlin.data.local
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
 
 @Entity
 data class PostEntity(
@@ -24,3 +25,11 @@ data class PostEntity(
     @ColumnInfo(name = "publishedAt")
     var publishedAt: String? = null
 )
+
+fun PostEntity.toPostsNews() =
+    DomainPost(
+        title = title,
+        description = description,
+        urlToImage = urlToImage,
+        publishedAt = publishedAt
+    )

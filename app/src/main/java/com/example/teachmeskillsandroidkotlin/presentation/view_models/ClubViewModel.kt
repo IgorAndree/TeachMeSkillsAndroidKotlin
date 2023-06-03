@@ -3,9 +3,11 @@ package com.example.teachmeskillsandroidkotlin.presentation.view_models
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.teachmeskillsandroidkotlin.domain.models.DomainPost
 import com.example.teachmeskillsandroidkotlin.domain.use_cases.GetPostInfoUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -17,10 +19,12 @@ open class ClubViewModel @Inject constructor(
     val postInfo: LiveData<DomainPost> = _postInfo
 
     init {
-        getPostInfo()
+        viewModelScope.launch {
+            getPostInfo()
+        }
     }
 
-    private fun getPostInfo() {
-        // _postInfo.value = getPostInfoUseCase.getPostInfo()
+    private suspend fun getPostInfo() {
+        _postInfo.value = getPostInfoUseCase.getPostInfoById()
     }
 }

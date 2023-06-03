@@ -16,13 +16,21 @@ class PostsRepositoryImpl @Inject constructor(
 ) : PostRepository {
     override suspend fun getPosts(): List<DataPostDto> {
         val postList = postsRemote.getPosts().posts.orEmpty()
+
         if (postList.isNotEmpty()) {
             postList.forEach { postDto ->
                 postsLocal.insertPost(post = postDto.toLocalPost())
             }
         }
+
         return postList
     }
 
     override suspend fun getLocalPosts(): List<PostEntity> = postsLocal.getLocalPosts().orEmpty()
+    override suspend fun getPostInfoFromLocal(): PostEntity? {
+        return null
+    }
+
+    override suspend fun getLocalRepositoryById(): PostEntity? =
+        postsLocal.getById(3)
 }
