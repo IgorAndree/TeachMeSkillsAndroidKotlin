@@ -47,4 +47,5 @@
         android:label="@string/test_coroutines_fragment_label"
         tools:layout="@layout/test_coroutines_fragment">
     </fragment>
+
 </navigation>

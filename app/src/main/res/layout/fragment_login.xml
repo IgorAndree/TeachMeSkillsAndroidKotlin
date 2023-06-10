@@ -9,6 +9,17 @@
     android:background="@drawable/login_top_euro_leagues"
     tools:context=".presentation.fragments.LoginFragment">
 
+    <com.example.teachmeskillsandroidkotlin.presentation.custom.TestCustomView
+        android:id="@+id/TestCustomView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_centerInParent="true">
+    </com.example.teachmeskillsandroidkotlin.presentation.custom.TestCustomView>
+
     <TextView
         android:id="@+id/textview_first"
         android:layout_width="wrap_content"
